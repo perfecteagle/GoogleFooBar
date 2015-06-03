@@ -1,0 +1,177 @@
+Mounting /home/guest...
+Welcome to foobar version 42-beta (2015-06-01-16:41+0000)
+
+Google has a code challenge ready for you.
+Been here before? Log in
+
+This invitation will expire if you close this page.
+foobar:~/ guest$ cztf
+cztf: command not found. Type help for a list of commands
+foobar:~/ guest$ touch
+touch: command not found. Type help for a list of commands
+foobar:~/ guest$ help
+Use the following shell commands:
+cd	change directory [dir_name]
+cat	print file [file_name]
+deleteme	delete all of your data associated with foobar
+edit	open file in editor [file_name]
+feedback	provide feedback on foobar
+less	print a file a page at a time [file_name]
+ls	list directory contents [dir_name]
+request	request new challenge (of type 'tag') [tag]
+status	print progress
+submit	submit final solution file for assessment [file_name]
+tags	print tag list
+verify	runs tests on solution file [file_name]
+foobar:~/ guest$ ls
+start_here.txt
+foobar:~/ guest$ start_here.txt
+Where there's foo, there's fire!
+start_here.txt: command not found. Type help for a list of commands
+foobar:~/ guest$ cat start_here.txt 
+Type request to request a challenge. Type help for a list of commands.
+foobar:~/ guest$ request
+Requesting challenge...
+New challenge "a_pirate_walks_into_a_bar" added to your home folder.
+Time to solve: 48 hours.
+foobar:~/ guest$ cat a_pirate_walks_into_a_bar/
+cat: a_pirate_walks_into_a_bar/: Is a directory
+foobar:~/ guest$ ls
+a_pirate_walks_into_a_bar
+start_here.txt
+foobar:~/ guest$ cd a_pirate_walks_into_a_bar/
+foobar:~/a_pirate_walks_into_a_bar guest$ ls
+readme.txt
+constraints.txt
+solution.py
+solution.java
+foobar:~/a_pirate_walks_into_a_bar guest$ cat readme.txt 
+A pirate walks into a bar...
+============================
+
+You must hurry to find Professor Boolean's secret lab. You fear it may be too late. 
+
+Rumor has it that one of the pirates in this tavern knows where it is. There's a whole row of them seated at the bar. You start by talking to the pirate seated on the left-most barstool. However, the pirate redirects you to another pirate. Fine... you go to talk to that one. To your great annoyance, that pirate redirects you to yet another pirate! And on and on it goes. Is there no end to this madness? You notice each pirate has a number tattooed on his arm and decide to ID each man by his number. Each pirate redirects to a different pirate, other than himself. Because of this, it is guaranteed that you will start going in loops talking to them.
+
+Write a function answer(numbers) which returns the number of pirates which form a loop, given that you start by talking to the left-most pirate, 0. numbers will be an array of non-negative integers such that number[m] is the number of the pirate to whom pirate m redirects. No pirate redirects to himself. The left-most pirate is number 0, the next is number 1, and so on. Each element in the numbers list will be in the range [0, n-1] where n is the length of the numbers list.
+
+For example, suppose the numbers list were [1, 3, 0, 1]. Then pirate 0 redirects to pirate 1, who redirects to pirate 3, who redirects back to pirate 1. There is a loop of two pirates: 1, 3. Thus the answer would be 2. Note that even though you started with pirate 0, he is not part of the loop.
+
+The number of pirates will be at least 2 and no more than 5000.
+
+Languages
+=========
+
+To provide a Python solution, edit solution.py
+To provide a Java solution, edit solution.java
+
+Test cases
+==========
+
+Inputs:
+    (int list) numbers = [1, 0]
+Output:
+    (int) 2
+
+Inputs:
+    (int list) numbers = [1, 2, 1]
+Output:
+    (int) 2
+
+Use verify [file] to test your solution and see how it does. When you are finished editing your code, use submit [file] to submit your answer. If your solution passes the test cases, it will be removed from your home folder.
+foobar:~/a_pirate_walks_into_a_bar guest$ cat constraints.txt 
+Java
+====
+
+Your code will be compiled using standard Java 7. It must implement the answer() method in the solution stub.
+
+Execution time is limited. Some classes are restricted (e.g. java.lang.ClassLoader). You will see a notice if you use a restricted class when you verify your solution.
+
+Third-party libraries, input/output operations, spawning threads or processes and changes to the execution environment are not allowed.
+
+Python
+======
+
+Your code will run inside a Python 2.7.6 sandbox.
+
+Standard libraries are supported except for bz2, crypt, fcntl, mmap, pwd, pyexpat, select, signal, termios, thread, time, unicodedata, zipimport, zlib.
+foobar:~/a_pirate_walks_into_a_bar guest$ edit solution.java 
+Mounting /home/perfecteagle...
+Logged in as perfecteagle.
+foobar:~/a_pirate_walks_into_a_bar perfecteagle$ ls
+ls: command not found. Type help for a list of commands
+foobar:~/a_pirate_walks_into_a_bar perfecteagle$ help
+Use the following shell commands:
+cd	change directory [dir_name]
+cat	print file [file_name]
+deleteme	delete all of your data associated with foobar
+edit	open file in editor [file_name]
+feedback	provide feedback on foobar
+less	print a file a page at a time [file_name]
+ls	list directory contents [dir_name]
+request	request new challenge (of type 'tag') [tag]
+status	print progress
+submit	submit final solution file for assessment [file_name]
+tags	print tag list
+verify	runs tests on solution file [file_name]
+foobar:~/a_pirate_walks_into_a_bar perfecteagle$ ls
+readme.txt
+constraints.txt
+solution.py
+solution.java
+foobar:~/a_pirate_walks_into_a_bar perfecteagle$ cd
+foobar:~/ perfecteagle$ ls
+a_pirate_walks_into_a_bar
+start_here.txt
+foobar:~/ perfecteagle$ tags
+Requesting tags...
+algo           	algorithms
+data_struct    	data structures
+low_level      	low-level representation (binary representations, endianness)
+math           	math
+crypto         	security and cryptography
+foobar:~/ perfecteagle$ request math
+Requesting challenge...
+Max active challenge count reached.
+foobar:~/ perfecteagle$ status
+You've not yet solved a challenge.
+foobar:~/ perfecteagle$ feedback
+[#1] What type of feedback are you reporting?
+[B]ug [F]eature [O]ther: o
+[#2] Feedback [42]: This website is very difficult if you know little/no coding. Obviously. I just hope that the invitation saves since I logged in with my Google account, so I can come back here and knock out every challenge you give me once I feel I'm ready. This will be a goal. I don't like to feel stupid, but I do like a challenge, so consider it challenge accepted. I'm learning how to code and want to be a software developer. So I guess here I come! This should be fun!
+Are the above details correct?
+[Y]es or [N]o: y
+Submitting your feedback...
+Feedback submitted. Thank you.
+[TERMINAL]: Unexpected token 
+SyntaxError: Unexpected token 
+    at Object.parse (native)
+    at Function.Z.parseJSON (https://foobar.withgoogle.com/staticfiles/js/rhgame.8ee507f8.js:317:9753)
+    at new h (https://foobar.withgoogle.com/staticfiles/js/rhgame.8ee507f8.js:319:30755)
+    at e.extend.name (https://foobar.withgoogle.com/staticfiles/js/rhgame.8ee507f8.js:320:10389)
+    at L (https://foobar.withgoogle.com/staticfiles/js/rhgame.8ee507f8.js:321:4252)
+    at e.extend.e.omap.pop (https://foobar.withgoogle.com/staticfiles/js/rhgame.8ee507f8.js:321:13005)
+    at null.pop (https://foobar.withgoogle.com/staticfiles/js/rhgame.8ee507f8.js:321:13792)
+    at Object.o.remove (https://foobar.withgoogle.com/staticfiles/js/rhgame.8ee507f8.js:319:26817)
+    at Object.o.onEndpointResponse (https://foobar.withgoogle.com/staticfiles/js/rhgame.8ee507f8.js:319:26518)
+    at Object.t (https://foobar.withgoogle.com/staticfiles/js/rhgame.8ee507f8.js:317:23449)
+ls
+a_pirate_walks_into_a_bar
+start_here.txt
+cd
+feedback 
+[#1] What type of feedback are you reporting?
+[B]ug [F]eature [O]ther: b
+[TERMINAL]: Unexpected token 
+SyntaxError: Unexpected token 
+    at Object.parse (native)
+    at Function.Z.parseJSON (https://foobar.withgoogle.com/staticfiles/js/rhgame.8ee507f8.js:317:9753)
+    at new h (https://foobar.withgoogle.com/staticfiles/js/rhgame.8ee507f8.js:319:30755)
+    at e.extend.name (https://foobar.withgoogle.com/staticfiles/js/rhgame.8ee507f8.js:320:10389)
+    at L (https://foobar.withgoogle.com/staticfiles/js/rhgame.8ee507f8.js:321:4252)
+    at e.extend.e.omap.pop (https://foobar.withgoogle.com/staticfiles/js/rhgame.8ee507f8.js:321:13005)
+    at null.pop (https://foobar.withgoogle.com/staticfiles/js/rhgame.8ee507f8.js:321:13792)
+    at Object.o.remove (https://foobar.withgoogle.com/staticfiles/js/rhgame.8ee507f8.js:319:26817)
+    at Object.o.onKeyDown (https://foobar.withgoogle.com/staticfiles/js/rhgame.8ee507f8.js:319:24267)
+    at Object.t [as keydown] (https://foobar.withgoogle.com/staticfiles/js/rhgame.8ee507f8.js:317:23449)
+[#2] Feedback [252]:  
